@@ -48,6 +48,9 @@ In a world музыкальных стриминговых сервисов (mus
 
 
 ## 🧪 Demo
+
+**Website : https://synapse-murex-pi.vercel.app**
+
 ###  Demo Account
 
 <details>
