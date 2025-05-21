@@ -56,8 +56,8 @@ In a world музыкальных стриминговых сервисов (mus
 <details>
   <summary>Click to view Demo Account Credentials</summary>
    
-  *   **Email:** `user1@example.com`
-  *   **Password:** `Password123!`
+  *   **Email:** `quiflern@gmail.com`
+  *   **Password:** `quiflern`
 
   **Note:** These are temporary credentials for a demo. For a live application, users should register their own accounts.
 </details>
