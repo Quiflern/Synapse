@@ -1,0 +1,650 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 222 89% 50%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 261 100% 60%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 261 100% 60%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 345 100% 60%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+
+    --radius: 0.75rem;
+    
+    /* Theme-specific colors */
+    --electric: 222 100% 50%;
+    --neon: 270 100% 65%;
+    --cyber: 144 100% 50%;
+    --warning: 345 100% 60%;
+  }
+  
+  /* Theme classes - Cyberpunk (Default) */
+  .theme-cyberpunk {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 222 89% 50%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 261 100% 60%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 261 100% 60%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 345 100% 60%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 222 89% 50%;
+    
+    --electric: 222 100% 50%;
+    --neon: 270 100% 65%;
+    --cyber: 144 100% 50%;
+    --warning: 345 100% 60%;
+  }
+
+  /* Theme classes - Midnight Ash */
+  .theme-midnight-ash {
+    --background: 220 15% 12%;
+    --foreground: 0 0% 98%;
+    --card: 220 15% 12%;
+    --card-foreground: 0 0% 98%;
+    --popover: 220 15% 12%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 199 95% 57%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 3% 26%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 220 10% 20%;
+    --muted-foreground: 220 5% 65%;
+    --accent: 240 3% 26%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 220 10% 20%;
+    --input: 220 10% 20%;
+    --ring: 193 85% 57%;
+    
+    --electric: 199 95% 57%;
+    --neon: 240 3% 26%;
+    --cyber: 220 15% 12%;
+    --warning: 0 100% 65%;
+  }
+  
+  /* Theme classes - Obsidian Veil */
+  .theme-obsidian-veil {
+    --background: 260 25% 12%;
+    --foreground: 0 0% 98%;
+    --card: 260 25% 12%;
+    --card-foreground: 0 0% 98%;
+    --popover: 260 25% 12%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 267 27% 54%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 267 27% 50%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 260 15% 25%;
+    --muted-foreground: 260 10% 70%;
+    --accent: 267 27% 50%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 260 15% 25%;
+    --input: 260 15% 25%;
+    --ring: 267 27% 54%;
+    
+    --electric: 267 27% 54%;
+    --neon: 267 27% 50%;
+    --cyber: 260 25% 12%;
+    --warning: 0 100% 65%;
+  }
+  
+  /* Theme classes - Noir Eclipse */
+  .theme-noir-eclipse {
+    --background: 230 20% 13%;
+    --foreground: 0 0% 98%;
+    --card: 230 20% 13%;
+    --card-foreground: 0 0% 98%;
+    --popover: 230 20% 13%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 62%;
+    --primary-foreground: 0 0% 15%;
+    --secondary: 0 0% 33%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 230 20% 20%;
+    --muted-foreground: 230 10% 70%;
+    --accent: 0 0% 33%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 230 20% 20%;
+    --input: 230 20% 20%;
+    --ring: 0 0% 62%;
+    
+    --electric: 0 0% 62%;
+    --neon: 0 0% 33%;
+    --cyber: 230 20% 13%;
+    --warning: 0 100% 65%;
+  }
+  
+  /* Theme classes - Shadow Ember */
+  .theme-shadow-ember {
+    --background: 0 20% 13%;
+    --foreground: 0 0% 98%;
+    --card: 0 20% 13%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 20% 13%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 355 83% 57%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 24 95% 53%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 25%;
+    --muted-foreground: 0 0% 70%;
+    --accent: 24 95% 53%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 25%;
+    --input: 0 0% 25%;
+    --ring: 355 83% 57%;
+    
+    --electric: 355 83% 57%;
+    --neon: 24 95% 53%;
+    --cyber: 0 0% 15%;
+    --warning: 24 95% 53%;
+  }
+  
+  /* Theme classes - Light */
+  .theme-light {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 222 89% 50%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 261 100% 55%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 222 89% 50%;
+    
+    --electric: 222 89% 50%;
+    --neon: 270 100% 60%;
+    --cyber: 144 100% 50%;
+    --warning: 345 100% 60%;
+  }
+  
+  /* Theme classes - Morning Haze */
+  .theme-morning-haze {
+    --background: 210 30% 94%;
+    --foreground: 240 10% 3.9%;
+    --card: 210 30% 94%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 210 30% 94%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 215 44% 50%;
+    --primary-foreground: 210 10% 15%;
+    --secondary: 270 30% 94%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 210 20% 95%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 270 30% 94%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 210 20% 90%;
+    --input: 210 20% 90%;
+    --ring: 210 90% 85%;
+    
+    --electric: 210 90% 85%;
+    --neon: 270 30% 94%;
+    --cyber: 0 0% 100%;
+    --warning: 45 100% 80%;
+  }
+  
+  /* Theme classes - Ivory Bloom */
+  .theme-ivory-bloom {
+    --background: 350 60% 95%;
+    --foreground: 350 20% 20%;
+    --card: 350 60% 95%;
+    --card-foreground: 350 20% 20%;
+    --popover: 350 60% 95%;
+    --popover-foreground: 350 20% 20%;
+    --primary: 350 44% 63%;
+    --primary-foreground: 350 10% 15%;
+    --secondary: 30 80% 94%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 30 20% 95%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 30 80% 94%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 30 20% 90%;
+    --input: 30 20% 90%;
+    --ring: 350 80% 85%;
+    
+    --electric: 350 80% 85%;
+    --neon: 30 80% 94%;
+    --cyber: 0 0% 93%;
+    --warning: 45 100% 80%;
+  }
+  
+  /* Theme classes - Sunlit Linen */
+  .theme-sunlit-linen {
+    --background: 45 30% 94%;
+    --foreground: 40 20% 20%;
+    --card: 45 30% 94%;
+    --card-foreground: 40 20% 20%;
+    --popover: 45 30% 94%;
+    --popover-foreground: 40 20% 20%;
+    --primary: 39 62% 41%;
+    --primary-foreground: 60 10% 15%;
+    --secondary: 30 80% 94%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 45 20% 95%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 30 80% 94%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 45 20% 90%;
+    --input: 45 20% 90%;
+    --ring: 60 80% 85%;
+    
+    --electric: 60 80% 85%;
+    --neon: 30 80% 94%;
+    --cyber: 0 0% 95%;
+    --warning: 45 100% 80%;
+  }
+  
+  /* Theme classes - Cloudpetal */
+  .theme-cloudpetal {
+    --background: 0 0% 96%;
+    --foreground: 210 20% 20%;
+    --card: 0 0% 96%;
+    --card-foreground: 210 20% 20%;
+    --popover: 0 0% 96%;
+    --popover-foreground: 210 20% 20%;
+    --primary: 350 44% 63%;
+    --primary-foreground: 350 10% 15%;
+    --secondary: 210 90% 95%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 0 0% 97%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 210 90% 95%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 350 80% 85%;
+    
+    --electric: 350 80% 85%;
+    --neon: 210 90% 95%;
+    --cyber: 0 0% 100%;
+    --warning: 45 100% 80%;
+  }
+  
+  /* Theme classes - Custom (Will be overridden by CSS variables) */
+  .theme-custom {
+    /* Base styles will be set dynamically via JavaScript */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border font-space;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased min-h-screen;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Hide scrollbars but keep functionality */
+  * {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  
+  *::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari and Opera */
+  }
+
+  /* Theme-specific background gradients */
+  .theme-cyberpunk body {
+    background-image: 
+      radial-gradient(circle at 50% 30%, rgba(0, 102, 255, 0.25) 0%, transparent 40%),
+      radial-gradient(circle at 80% 60%, rgba(153, 51, 255, 0.25) 0%, transparent 40%);
+    background-size: 100% 100%;
+    background-attachment: fixed;
+  }
+
+  .theme-midnight-ash body {
+    background-image: 
+      radial-gradient(circle at 50% 30%, rgba(51, 195, 240, 0.25) 0%, transparent 40%),
+      radial-gradient(circle at 80% 60%, rgba(64, 62, 67, 0.25) 0%, transparent 40%);
+    background-size: 100% 100%;
+    background-attachment: fixed;
+  }
+
+  .theme-obsidian-veil body {
+    background-image: 
+      radial-gradient(circle at 50% 30%, rgba(126, 105, 171, 0.25) 0%, transparent 40%),
+      radial-gradient(circle at 80% 60%, rgba(110, 89, 165, 0.25) 0%, transparent 40%);
+    background-size: 100% 100%;
+    background-attachment: fixed;
+  }
+
+  .theme-noir-eclipse body {
+    background-image: 
+      radial-gradient(circle at 50% 30%, rgba(159, 158, 161, 0.15) 0%, transparent 40%),
+      radial-gradient(circle at 80% 60%, rgba(85, 85, 85, 0.15) 0%, transparent 40%);
+    background-size: 100% 100%;
+    background-attachment: fixed;
+  }
+
+  .theme-shadow-ember body {
+    background-image: 
+      radial-gradient(circle at 50% 30%, rgba(234, 56, 77, 0.2) 0%, transparent 40%),
+      radial-gradient(circle at 80% 60%, rgba(249, 115, 22, 0.2) 0%, transparent 40%);
+    background-size: 100% 100%;
+    background-attachment: fixed;
+  }
+
+  .theme-light body {
+    background-image: 
+      radial-gradient(circle at 50% 30%, rgba(0, 102, 255, 0.05) 0%, transparent 40%),
+      radial-gradient(circle at 80% 60%, rgba(153, 51, 255, 0.05) 0%, transparent 40%);
+    background-size: 100% 100%;
+    background-attachment: fixed;
+  }
+
+  .theme-morning-haze body {
+    background-image: 
+      radial-gradient(circle at 50% 30%, rgba(211, 228, 253, 0.5) 0%, transparent 40%),
+      radial-gradient(circle at 80% 60%, rgba(229, 222, 255, 0.5) 0%, transparent 40%);
+    background-size: 100% 100%;
+    background-attachment: fixed;
+  }
+
+  .theme-ivory-bloom body {
+    background-image: 
+      radial-gradient(circle at 50% 30%, rgba(255, 222, 226, 0.5) 0%, transparent 40%),
+      radial-gradient(circle at 80% 60%, rgba(253, 225, 211, 0.5) 0%, transparent 40%);
+    background-size: 100% 100%;
+    background-attachment: fixed;
+  }
+
+  .theme-sunlit-linen body {
+    background-image: 
+      radial-gradient(circle at 50% 30%, rgba(254, 247, 205, 0.5) 0%, transparent 40%),
+      radial-gradient(circle at 80% 60%, rgba(254, 198, 161, 0.5) 0%, transparent 40%);
+    background-size: 100% 100%;
+    background-attachment: fixed;
+  }
+
+  .theme-cloudpetal body {
+    background-image: 
+      radial-gradient(circle at 50% 30%, rgba(255, 222, 226, 0.5) 0%, transparent 40%),
+      radial-gradient(circle at 80% 60%, rgba(211, 228, 253, 0.5) 0%, transparent 40%);
+    background-size: 100% 100%;
+    background-attachment: fixed;
+  }
+
+  /* Remove any extra padding in #root */
+  #root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+  
+  /* Apply theme-specific styles to UI components */
+  .card,
+  .hover-card,
+  .dialog-content,
+  .popover-content,
+  .dropdown-content {
+    @apply bg-card text-card-foreground;
+  }
+  
+  .button-primary {
+    @apply bg-primary text-primary-foreground hover:bg-primary/90;
+  }
+  
+  .button-secondary {
+    @apply bg-secondary text-secondary-foreground hover:bg-secondary/90;
+  }
+  
+  .button-muted {
+    @apply bg-muted text-muted-foreground hover:bg-muted/90;
+  }
+  
+  .input, .select, .textarea {
+    @apply bg-background border-input;
+  }
+  
+  /* Colors mapped to theme variables */
+  .text-electric {
+    color: hsl(var(--electric));
+  }
+  
+  .text-neon {
+    color: hsl(var(--neon));
+  }
+  
+  .text-cyber {
+    color: hsl(var(--cyber));
+  }
+  
+  .text-warning {
+    color: hsl(var(--warning));
+  }
+  
+  .bg-electric {
+    background-color: hsl(var(--electric));
+  }
+  
+  .bg-neon {
+    background-color: hsl(var(--neon));
+  }
+  
+  .bg-cyber {
+    background-color: hsl(var(--cyber));
+  }
+  
+  .bg-warning {
+    background-color: hsl(var(--warning));
+  }
+  
+  /* Border colors with opacity variations */
+  .border-electric {
+    border-color: hsl(var(--electric));
+  }
+  
+  .border-electric\/20 {
+    border-color: hsl(var(--electric) / 0.2);
+  }
+  
+  .border-neon {
+    border-color: hsl(var(--neon));
+  }
+  
+  .border-cyber {
+    border-color: hsl(var(--cyber));
+  }
+  
+  .border-warning {
+    border-color: hsl(var(--warning));
+  }
+  
+  /* Custom scrollbar styles that follow theme colors */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: hsl(var(--background));
+    border-radius: 8px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: hsl(var(--electric) / 0.6);
+    border-radius: 8px;
+    border: 2px solid hsl(var(--background));
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: hsl(var(--electric) / 0.8);
+  }
+  
+  /* Firefox scrollbar */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--electric) / 0.6) hsl(var(--background));
+  }
+}
+
+@layer components {
+  /* Fixed glass-panel to use the custom theme-light variant correctly */
+  .glass-panel {
+    @apply bg-card/40 backdrop-blur-xl border border-white/10 shadow-lg;
+    box-shadow: 0 4px 30px rgba(var(--electric), 0.2);
+  }
+  
+  /* Add separate light theme styles */
+  .theme-light .glass-panel {
+    @apply bg-white/80 border-gray-200 text-foreground;
+  }
+  
+  .glass-card {
+    @apply glass-panel rounded-xl p-6;
+  }
+
+  .neon-border {
+    @apply relative;
+  }
+  
+  .neon-border::after {
+    content: "";
+    @apply absolute inset-0 rounded-xl pointer-events-none;
+    background: linear-gradient(to right, hsl(var(--electric)), hsl(var(--neon)));
+    padding: 1px;
+    -webkit-mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+    mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+  }
+  
+  .cyber-grid {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .cyber-grid::before {
+    content: "";
+    @apply absolute inset-0 opacity-10 z-0;
+    background-image: linear-gradient(to right, hsl(var(--electric)) 1px, transparent 1px),
+                      linear-gradient(to bottom, hsl(var(--electric)) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+  
+  /* Ticker animation for the Live Activity Ticker */
+  .animate-ticker {
+    animation: ticker 60s linear infinite;
+  }
+  
+  @keyframes ticker {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes equalizer {
+    0% { height: var(--min-height, 10%); }
+    100% { height: var(--max-height, 80%); }
+  }
+
+  /* Hover effect for buttons */
+  .hover-scale {
+    @apply transition-all duration-200 hover:scale-105 hover:shadow-lg;
+  }
+  
+  .hover-glow {
+    @apply transition-all duration-200;
+  }
+  
+  .hover-glow:hover {
+    box-shadow: 0 0 15px hsl(var(--electric) / 0.7);
+  }
+  
+  /* Skeleton loading animation */
+  .skeleton {
+    @apply bg-muted/40 animate-pulse rounded-md;
+  }
+}
+
+/* Add style for color picker input */
+.react-colorful {
+  width: 100% !important;
+  height: 150px !important;
+}
+
+/* Make dropdowns non-transparent for light themes */
+.theme-light .dropdown-content,
+.theme-morning-haze .dropdown-content,
+.theme-ivory-bloom .dropdown-content,
+.theme-sunlit-linen .dropdown-content,
+.theme-cloudpetal .dropdown-content {
+  @apply bg-white/95 backdrop-blur-sm border border-gray-200 shadow-lg;
+}
+
+/* Ensure dropdowns have a high z-index */
+.dropdown-content {
+  @apply z-50;
+}
