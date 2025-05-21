@@ -104,7 +104,7 @@ Follow these instructions to get a copy of the project up and running on your lo
        <details>
         <summary>Click to view Schema</summary>
       
-            ```sql
+
             SET statement_timeout = 0;
             SET lock_timeout = 0;
             SET idle_in_transaction_session_timeout = 0;
@@ -442,7 +442,6 @@ Follow these instructions to get a copy of the project up and running on your lo
             ALTER DEFAULT PRIVILEGES FOR ROLE "postgres" IN SCHEMA "public" GRANT ALL ON TABLES  TO "service_role";
             
             RESET ALL;
-            ```
       
       </details>
    
