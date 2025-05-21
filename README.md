@@ -4,7 +4,8 @@
 
 **Rediscover your memories through the power of music.**
 
-   *Application: DEMO*
+![synapse](https://github.com/user-attachments/assets/b3e3da5f-1a17-4386-a16a-789f7b0d9f15)
+
 
 ## 🎶 How It Works
 
