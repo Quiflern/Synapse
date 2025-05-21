@@ -111,12 +111,12 @@ export const PlaylistsGrid: React.FC<PlaylistsGridProps> = ({
       <div className="space-y-6">
         <div className="flex justify-between items-center">
           <h2 className={`text-2xl font-bold ${titleColor()}`}>
-            Your Playlists
+            {isPublicView ? "Public Playlists" : "Your Playlists"}
           </h2>
-          <Skeleton className="h-9 w-32 rounded-md" />
+          {!isPublicView && <Skeleton className="h-9 w-32 rounded-md" />}
         </div>
-        <Grid columns={{ sm: 1, md: 2, lg: 3, xl: 4 }} className="gap-4">
-          {[...Array(8)].map((_, i) => (
+        <Grid columns={{ sm: 2, md: 3, lg: 6, xl: 6 }} className="gap-4">
+          {[...Array(12)].map((_, i) => (
             <PlaylistSkeleton key={i} />
           ))}
         </Grid>
