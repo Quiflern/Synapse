@@ -246,30 +246,32 @@ export const MemoryCard: React.FC<MemoryCardProps> = ({
       {/* Card content */}
       <div className="relative z-10 p-4">
         {/* Header with track info and controls */}
-        <div className="flex items-center justify-between mb-3">
+        <div className="flex items-center justify-between mb-3 space-x-2"> {/* Added space-x-2 for a safety gap */}
+          {/* Left Part: Icon, Title, Artist - This part should be flexible */}
           <motion.div
-            className={`flex items-center gap-3 ${isDarkTheme ? "text-white" : "text-gray-800"}`}
+            className={`flex flex-1 items-center gap-3 min-w-0 ${isDarkTheme ? "text-white" : "text-gray-800"}`} // Added flex-1 and min-w-0
             initial={false}
             animate={{ x: hovered ? 0 : -5, opacity: hovered ? 1 : 0.8 }}
             transition={{ duration: 0.3 }}
           >
             <div
-              className={`w-10 h-10 rounded-full ${getIconBgColor()} flex items-center justify-center shadow-lg`}
+              className={`w-10 h-10 rounded-full ${getIconBgColor()} flex items-center justify-center shadow-lg flex-shrink-0`} // Icon should not shrink
             >
               <Music size={16} className={`${getIconColor()}`} />
             </div>
-            <div className="min-w-0">
+            <div className="min-w-0 flex-1"> {/* This div allows inner text to take remaining space and truncate */}
               <h3 className="font-medium text-sm truncate">{track.title}</h3>
               <p
-                className={`text-xs ${isDarkTheme ? "text-gray-400" : "text-gray-500"} truncate`}
+                className={`text-xs truncate ${isDarkTheme ? "text-gray-400" : "text-gray-500"}`}
               >
                 {track.artist || "Unknown"}
               </p>
             </div>
           </motion.div>
 
+          {/* Right Part: Buttons - This part should not shrink */}
           <motion.div
-            className="flex gap-1"
+            className="flex gap-1 flex-shrink-0" // Added flex-shrink-0
             initial={false}
             animate={{ x: hovered ? 0 : 5, opacity: hovered ? 1 : 0.8 }}
             transition={{ duration: 0.3 }}
