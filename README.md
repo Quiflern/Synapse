@@ -50,7 +50,7 @@ In a world музыкальных стриминговых сервисов (mus
 
 ## 🧪 Demo
 
-**Video Demo : (Soon)**
+**Video Demo : [(https://drive.google.com/file/d/16HLQj3JcM9S7Zzi0lC2SfeF28rlpw5rE/view?usp=sharing)](https://drive.google.com/file/d/16HLQj3JcM9S7Zzi0lC2SfeF28rlpw5rE/view?usp=sharing)**
 
 **Netlify : https://synapsea.netlify.app**
 
