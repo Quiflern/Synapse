@@ -50,7 +50,12 @@ In a world музыкальных стриминговых сервисов (mus
 
 ## 🧪 Demo
 
-**Website : https://synapse-murex-pi.vercel.app**
+**Video Demo : (Soon)**
+
+**Netlify : https://synapsea.netlify.app**
+
+**Vercel : https://synapse-murex-pi.vercel.app**
+
 
 ###  Demo Account
 
@@ -62,12 +67,6 @@ In a world музыкальных стриминговых сервисов (mus
 
   **Note:** These are temporary credentials for a demo. For a live application, users should register their own accounts.
 </details>
-
-
-**(DEMO Video)**
-
-*   *Example: DEMO*
-
 
 ## 🚀 Getting Started
 
